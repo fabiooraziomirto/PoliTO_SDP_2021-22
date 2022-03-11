@@ -6,25 +6,55 @@
 #define N 7
 
 typedef struct {
-    int tid;
-    char str[N];
+    int n;
+    int max;
+    pthread_t *t;
 } tS;
 
 void *tF(void *par){
-    tS *tD;
-    int tid;
-    char str[N];
+    tS *tD, *tD1, *tD2;
+    int i;
     pthread_t tid1, tid2;
     void *status;
-    int i = 0;
-    int parInt = (int) par;
-    for(i = 0; i < parInt; i++){
-        pthread_create(&tid1, NULL, tF, (void*) i);
-        pthread_create(&tid2, NULL, tF, (void*) i);
+    tD = (tS*) par;
+    if(tD->n < tD->max){
+        tD1 = (tS*) malloc(sizeof(tS));
+        tD2 = (tS*) malloc(sizeof(tS));
+
+        tD1->t = (pthread_t*) malloc((tD->max)*sizeof(pthread_t));
+        tD2->t = (pthread_t*) malloc((tD->max)*sizeof(pthread_t));
+
+        tD1->max = tD->max;
+        tD2->max = tD->max;
+
+        tD1->n = tD->n;
+        for(i = 0; i < tD->n; i++)
+            tD1->t[i] = tD->t[i];
+        tD1->t[tD->n] = pthread_self();
+        tD1->n++;
+
+        tD2->n = tD->n;
+        for(i = 0; i < tD->n; i++)
+            tD2->t[i] = tD->t[i];
+        tD2->t[tD->n] = pthread_self();
+        tD2->n++;
+
+        pthread_create(&tid1, NULL, tF, (void*) tD1);
+        pthread_create(&tid2, NULL, tF, (void*) tD2);
+
         pthread_join(tid1, &status);
+        free(tD1->t);
+        free(tD1);
+
         pthread_join(tid2, &status);
-    } 
-        printf("Tid = %ld\n", pthread_self());
+        free(tD2->t);
+        free(tD2);
+    } else {
+        for(i = 0; i < tD->max; i++)
+            printf("Tid = %ld ", tD->t[i]);
+        printf("\n");
+    }
+        
 
     pthread_exit(NULL);
 }
@@ -34,8 +64,15 @@ int main(int argc, char** argv){
     if(argc != 2)
         printf("Errore\n");
     n = atoi(argv[1]);
-    pthread_t *t = (pthread_t*) malloc(n*sizeof(pthread_t*));
-    tS *v = (tS*) malloc(n*sizeof(tS*));
-    tF((void*) n);
+    
+    tS *v = (tS*) malloc(n*sizeof(tS));
+    v->max = n+1;
+    v->n = 0;
+    v->t = (pthread_t*) malloc(v->max*sizeof(pthread_t));
+    tF((void*) v);
+
+    free(v->t);
+    free(v);
+    
     return 0;
 }
