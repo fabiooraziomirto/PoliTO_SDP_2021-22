@@ -14,7 +14,7 @@
 void cd_function(char *dir1, char *dir2){
     struct stat buf1;
     DIR *dp1;
-    char sourceFile[L], destFile[L], dir2P[L], dir1P[L], buf[BUFSIZE];
+    char sourceFile[L], destFile[L], dir2P[L], dir1P[L], buf[BUFSIZE], buf2[BUFSIZE];
     struct dirent *dirp1;
     int nR, nW, fdR, fdW;
 
@@ -43,6 +43,8 @@ void cd_function(char *dir1, char *dir2){
             while((nR = read(fdR, buf, BUFSIZE)) > 0){
                 printf("%s\n", buf);
                 printf("%d\n", nR);
+                sprintf(buf2, "%s\n%d\n", dirp1->d_name, nR);
+                nW = write(fdW, buf2, strlen(buf2));
                 nW = write(fdW, buf, nR);
                 printf("%d\n", nW);
             }
