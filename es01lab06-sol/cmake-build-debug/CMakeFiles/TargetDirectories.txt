@@ -1,0 +1,3 @@
+D:/PC/UNI/LAUREA MAGISTRALE/System and Device Programming/VETRO/es01lab06-sol/cmake-build-debug/CMakeFiles/es01lab06-sol.dir
+D:/PC/UNI/LAUREA MAGISTRALE/System and Device Programming/VETRO/es01lab06-sol/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/PC/UNI/LAUREA MAGISTRALE/System and Device Programming/VETRO/es01lab06-sol/cmake-build-debug/CMakeFiles/rebuild_cache.dir
