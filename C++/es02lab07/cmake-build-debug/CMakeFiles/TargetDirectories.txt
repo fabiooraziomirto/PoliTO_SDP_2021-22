@@ -1,3 +1,3 @@
-/home/fab/CLionProjects/untitled/C++/es02lab07/cmake-build-debug/CMakeFiles/es02lab07.dir
-/home/fab/CLionProjects/untitled/C++/es02lab07/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/fab/CLionProjects/untitled/C++/es02lab07/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/fab/CLionProjects/SDP/C++/es02lab07/cmake-build-debug/CMakeFiles/es02lab07.dir
+/home/fab/CLionProjects/SDP/C++/es02lab07/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/fab/CLionProjects/SDP/C++/es02lab07/cmake-build-debug/CMakeFiles/rebuild_cache.dir

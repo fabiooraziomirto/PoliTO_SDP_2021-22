@@ -39,7 +39,7 @@ include CMakeFiles/rules.ninja
 #############################################
 # Logical path to working directory; prefix for absolute paths.
 
-cmake_ninja_workdir = /home/fab/CLionProjects/untitled/C++/es02lab07/cmake-build-debug/
+cmake_ninja_workdir = /home/fab/CLionProjects/SDP/C++/es02lab07/cmake-build-debug/
 # =============================================================================
 # Object build statements for EXECUTABLE target es02lab07
 
@@ -49,7 +49,7 @@ cmake_ninja_workdir = /home/fab/CLionProjects/untitled/C++/es02lab07/cmake-build
 
 build cmake_object_order_depends_target_es02lab07: phony || CMakeFiles/es02lab07.dir
 
-build CMakeFiles/es02lab07.dir/main.cpp.o: CXX_COMPILER__es02lab07_Debug /home/fab/CLionProjects/untitled/C++/es02lab07/main.cpp || cmake_object_order_depends_target_es02lab07
+build CMakeFiles/es02lab07.dir/main.cpp.o: CXX_COMPILER__es02lab07_Debug /home/fab/CLionProjects/SDP/C++/es02lab07/main.cpp || cmake_object_order_depends_target_es02lab07
   DEP_FILE = CMakeFiles/es02lab07.dir/main.cpp.o.d
   FLAGS = -g -std=gnu++14
   OBJECT_DIR = CMakeFiles/es02lab07.dir
@@ -76,7 +76,7 @@ build es02lab07: CXX_EXECUTABLE_LINKER__es02lab07_Debug CMakeFiles/es02lab07.dir
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/fab/CLionProjects/untitled/C++/es02lab07/cmake-build-debug && /snap/clion/190/bin/cmake/linux/bin/ccmake -S/home/fab/CLionProjects/untitled/C++/es02lab07 -B/home/fab/CLionProjects/untitled/C++/es02lab07/cmake-build-debug
+  COMMAND = cd /home/fab/CLionProjects/SDP/C++/es02lab07/cmake-build-debug && /snap/clion/190/bin/cmake/linux/bin/ccmake -S/home/fab/CLionProjects/SDP/C++/es02lab07 -B/home/fab/CLionProjects/SDP/C++/es02lab07/cmake-build-debug
   DESC = Running CMake cache editor...
   pool = console
   restat = 1
@@ -88,7 +88,7 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/fab/CLionProjects/untitled/C++/es02lab07/cmake-build-debug && /snap/clion/190/bin/cmake/linux/bin/cmake --regenerate-during-build -S/home/fab/CLionProjects/untitled/C++/es02lab07 -B/home/fab/CLionProjects/untitled/C++/es02lab07/cmake-build-debug
+  COMMAND = cd /home/fab/CLionProjects/SDP/C++/es02lab07/cmake-build-debug && /snap/clion/190/bin/cmake/linux/bin/cmake --regenerate-during-build -S/home/fab/CLionProjects/SDP/C++/es02lab07 -B/home/fab/CLionProjects/SDP/C++/es02lab07/cmake-build-debug
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -104,7 +104,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # =============================================================================
 
 #############################################
-# Folder: /home/fab/CLionProjects/untitled/C++/es02lab07/cmake-build-debug
+# Folder: /home/fab/CLionProjects/SDP/C++/es02lab07/cmake-build-debug
 
 build all: phony es02lab07
 
