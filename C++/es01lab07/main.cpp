@@ -1,9 +1,7 @@
 #include <iostream>
-#include <string>
 #include "queue"
 #include "thread"
 #include "condition_variable"
-#include <vector>
 
 using namespace std;
 
